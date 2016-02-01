@@ -501,7 +501,7 @@ footer {
       <br/>
       <br/>
       <p>
-      	Funcionalidade ainda não implementada.
+      	Funcionalidade ainda não implementada, mas ja deveria ter sido.
       </p>
     </section>
     
