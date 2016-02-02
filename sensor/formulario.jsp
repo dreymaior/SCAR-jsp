@@ -497,6 +497,15 @@ html, body {
 </head>
 <body>
 <header>
+	  <div id="usuario">
+		<c:if test="${usuarioWeb.logado}">
+			Olá, ${usuarioWeb.nome }! <a href="<c:url value="/logout"/>">Logout</a>
+		</c:if>
+		<c:if test="${empty usuarioWeb or not usuarioWeb.logado}">
+			Você não está logado. <a href="<c:url value="/login"/>">Login</a>
+			<a href="<c:url value="/usuarios/novo/usuario"/>">Cadastre-se</a>
+		</c:if>
+	  </div>
       <h1 class="float-l">
         <a href="/SCAR" title="Titulo do Site">SCAR</a>
       </h1>
@@ -545,7 +554,7 @@ html, body {
 </ul>
 
 <!-- <form action="adiciona">  -->
-<form action="<c:url value="/sensores"/>" method="POST">
+<form action="<c:url value="/sensor"/>" method="POST">
 	<div class="container">
   	<form role="form">
 		<legend>Adicionar Sensor</legend>

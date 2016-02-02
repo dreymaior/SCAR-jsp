@@ -478,6 +478,15 @@ footer {
 		} 
 	</script>
 <header>
+      <div id="usuario">
+		<c:if test="${usuarioWeb.logado}">
+			Olá, ${usuarioWeb.nome }! <a href="<c:url value="/logout"/>">Logout</a>
+		</c:if>
+		<c:if test="${empty usuarioWeb or not usuarioWeb.logado}">
+			Você não está logado. <a href="<c:url value="/login"/>">Login</a>
+			<a href="<c:url value="/usuarios/novo/usuario"/>">Cadastre-se</a>
+		</c:if>
+	  </div>
       <h1 class="float-l">
         <a href="/SCAR" title="Titulo do Site">SCAR</a>
       </h1>

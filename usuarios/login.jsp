@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<title>Editar</title>
+<title>Formulario</title>
 <style>
 @CHARSET "UTF-8";
 html, body, div, span, applet, object, iframe,
@@ -458,13 +458,12 @@ footer {
   background: #ECECEC;
   z-index: 2;
 }
-
-.content-sensor {
+.content-user {
 	position: relative;
 	top: 30px;
 	left: 15px;
 }
-.content-sensor a {
+.content-user a {
   color: #5a5a5a;
   text-transform: uppercase;
 }
@@ -493,9 +492,11 @@ html, body {
   height: 5px; 
 }
 
+
 </style>
 </head>
 <body>
+
 <header>
 	  <div id="usuario">
 		<c:if test="${usuarioWeb.logado}">
@@ -505,7 +506,7 @@ html, body {
 			Você não está logado. <a href="<c:url value="/login"/>">Login</a>
 			<a href="<c:url value="/usuarios/novo/usuario"/>">Cadastre-se</a>
 		</c:if>
-	 </div>
+	  </div>
       <h1 class="float-l">
         <a href="/SCAR" title="Titulo do Site">SCAR</a>
       </h1>
@@ -517,25 +518,25 @@ html, body {
       <nav class="float-r">
         <ul class="list-auto">
           <li>
-          	<a href="/SCAR/">Home</a>
+          	<a href="<c:url value="/"/>" title="Home">Home</a>
           </li>
           <li>
-            <a href="/SCAR/usuarios">Usuários</a>
+            <a href="<c:url value="/usuarios"/>" title="Usuarios">Usuários</a>
           </li>
           <li>
-            <a href="/SCAR/sensor">Sensores</a>
+            <a href="<c:url value="/sensor"/>" title="Sensores">Sensores</a>
           </li>
           <li>
-            <a href="/SCAR/estrutura">Estrutura</a>
+            <a href="<c:url value="/estrutura"/>" title="Estrutura">Estrutura</a>
           </li>
           <li>
-            <a href="/SCAR/cftv">CFTV</a>
+            <a href="<c:url value="/cftv"/> title="Cftv">CFTV</a>
           </li>
           <li>
-            <a href="/SCAR/log">Log</a>
+            <a href="<c:url value="/log"/>" title="Log">Log</a>
           </li>
           <li>
-            <a href="/SCAR/admin/sensores">Admin / Sensores</a>
+            <a href="/admin/sensores">Admin / Sensores</a>
           </li>
         </ul>
       </nav>
@@ -544,37 +545,38 @@ html, body {
     <br/>
     <br/>
     <br/>
-
-<div class="content-sensor">
-
+<div class="content-user">
 <ul>
 	<c:forEach items="${errors}" var="error">
 		<li>${error.category } - ${error.message }</li>
 	</c:forEach>
 </ul>
 
-	<!-- <form action="altera">  -->
-	<form action="<c:url value="/sensor/${sensor.id }"/>" method="POST">
-		<div class="container">
-  		<form role="form">
-  			<div class="form-group">
-			<legend>Editar Produto</legend>
-			<input type="hidden" name="sensor.id" value="${sensor.id }" />
-			</div>
-			<div class="form-group">
-			<label for="nome">Nome:</label>			
-			<input id="nome" type="text" name="sensor.nome" value="${sensor.nome }"/>
-			</div>
-			<div class="form-group">
-			<label for="tipo">Tipo:</label>
-			<input id="tipo" type="text" name="sensor.tipo" value="${sensor.tipo }"/>
-			</div>
-			<button type="submit" name="_method" value="PUT">Enviar</button>
+<!-- <form action="adiciona"> -->
+<form action="<c:url value="/login"/>" method="POST">
+  <div class="container">
+  <form role="form">
 
-		</form>
+		<legend>Efetuar Login</legend>
+		
+		<div class="form-group">
+		<label for="nome">Login:</label>
+		<input id="login" class="required" 
+			type="text" name="usuario.login" value="${usuario.login}" /><br />
 		</div>
-	</form>
-	
+		<div class="form-group">	
+		<label for="password">Senha (*):</label>
+		<input id="password" class="required"
+			type="password" name="usuario.password"/><br />
+		</div>
+		<button type="submit">Enviar</button>		
+
+  </form>
+  </div>
+</form>
+
+</div>
+
     <footer class="site-footer">
     	<li>
     		<br />
@@ -582,7 +584,4 @@ html, body {
     	</li>
     </footer>
 
-</div>
-
-</body>
 </html>
