@@ -463,6 +463,17 @@ footer {
   background: #ECECEC;
   z-index: 2;
 }
+
+.content-user {
+	position: relative;
+	top: 30px;
+	left: 15px;
+}
+.content-user a {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+
 </style>
 <title>Listagem de Usuários</title>
 </head>
@@ -507,6 +518,7 @@ footer {
     <br/>
     <br/>
 
+<div class="content-user">
 
 		<td><a href="<c:url value="/usuarios/novo/usuario"/>">Novo Usuário</a></td>
 	<table>
@@ -539,6 +551,8 @@ footer {
 			</c:forEach>
 		</tbody>
 	</table>
+	
+	</div>
 	
 	<footer>
     	<li>

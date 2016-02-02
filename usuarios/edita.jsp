@@ -455,6 +455,16 @@ footer {
   background: #ECECEC;
   z-index: 2;
 }
+.content-user {
+	position: relative;
+	top: 30px;
+	left: 15px;
+}
+.content-user a {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+
 
 </style>
 </head>
@@ -499,6 +509,8 @@ footer {
     <br/>
     <br/>
 
+<div class="content-user">
+
 <ul>
 	<c:forEach items="${errors}" var="error">
 		<li>${error.category } - ${error.message }</li>
@@ -535,6 +547,8 @@ footer {
 			<button type="submit" name="_method" value="PUT">Enviar</button>
 		</fieldset>
 	</form>
+	
+	</div>
 	
 	<footer>
     	<li>

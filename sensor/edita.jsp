@@ -456,6 +456,17 @@ footer {
   z-index: 2;
 }
 
+.content-sensor {
+	position: relative;
+	top: 30px;
+	left: 15px;
+}
+.content-sensor a {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+
+
 </style>
 </head>
 <body>
@@ -499,6 +510,8 @@ footer {
     <br/>
     <br/>
 
+<div class="content-sensor">
+
 <ul>
 	<c:forEach items="${errors}" var="error">
 		<li>${error.category } - ${error.message }</li>
@@ -527,6 +540,8 @@ footer {
     		<h6>		Todos os direitos reservados</h6>
     	</li>
     </footer>
+
+</div>
 
 </body>
 </html>

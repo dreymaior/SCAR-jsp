@@ -5,6 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 <style type="text/css">
 .link {
 	text-decoration: underline;
@@ -463,6 +465,33 @@ footer {
   background: #ECECEC;
   z-index: 2;
 }
+
+.content-sensor {
+	position: relative;
+	top: 30px;
+	left: 15px;
+}
+.content-sensor a {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+
+.content-sensor .link {
+	color: #5a5a5a;
+  	text-transform: uppercase;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+
 </style>
 <title>Listagem de Sensores</title>
 </head>
@@ -506,7 +535,7 @@ footer {
 	<br/>
     <br/>
     <br/>
-    
+    <div class="content-sensor">
     <td><a href="<c:url value="/sensor/novo"/>">Novo Sensor</a></td>    
     <table>
     	<thead>
@@ -531,6 +560,7 @@ footer {
     		</c:forEach>
     	</tbody>
     </table>
+    </div>
 
 </body>
 </html>

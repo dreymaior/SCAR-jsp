@@ -456,6 +456,16 @@ footer {
   z-index: 2;
 }
 
+.content-sensor {
+	position: relative;
+	top: 30px;
+	left: 15px;
+}
+.content-sensor a {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+
 </style>
 </head>
 <body>
@@ -498,6 +508,8 @@ footer {
     <br/>
     <br/>
     <br/>
+   
+<div class="content-sensor">
     
 <ul>
 	<c:forEach items="${errors}" var="error">
@@ -519,6 +531,8 @@ footer {
 		<button type="submit">Enviar</button>
 	</fieldset>
 </form>
+   
+</div>
     
 </body>
 </html>
