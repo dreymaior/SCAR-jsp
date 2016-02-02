@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <title>Formulario</title>
 <style>
 @CHARSET "UTF-8";
@@ -465,6 +468,30 @@ footer {
   color: #5a5a5a;
   text-transform: uppercase;
 }
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.content-user {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+.content-user:after {
+  content: "";
+  display: block;
+}
+.site-footer, .content-user:after {
+  height: 5px; 
+}
 
 </style>
 </head>
@@ -519,22 +546,23 @@ footer {
 
 <!-- <form action="adiciona">  -->
 <form action="<c:url value="/sensores"/>" method="POST">
-	<fieldset>
+	<div class="container">
+  	<form role="form">
 		<legend>Adicionar Sensor</legend>
-		
+		<div class="form-group">
 		<label for="nome">Nome:</label>
 		<input id="nome" type="text" name="sensor.nome" />
-		
+		</div>
+		<div class="form-group">
 		<label for="tipo">Tipo:</label>
 		<input id="tipo" type="text" name="sensor.tipo" />
-		
+		</div>
 		<button type="submit">Enviar</button>
-	</fieldset>
-</form>
-   
+	</form>
+	</div>
 </div>
 
-    <footer>
+    <footer class="site-footer">
     	<li>
     		<br />
     		<h6>		Todos os direitos reservados</h6>

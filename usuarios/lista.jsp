@@ -489,6 +489,10 @@ th, td {
 }
 tr:nth-child(even){background-color: #f2f2f2}
 
+.site-footer, .content-user:after {
+  height: 5px; 
+}
+
 </style>
 <title>Listagem de Usuários</title>
 </head>
@@ -569,7 +573,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 	
 	</div>
 	
-	<footer>
+    <footer class="site-footer">
     	<li>
     		<br />
     		<h6>		Todos os direitos reservados</h6>
