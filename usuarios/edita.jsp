@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <title>Editar</title>
 <style>
 @CHARSET "UTF-8";
@@ -464,7 +467,30 @@ footer {
   color: #5a5a5a;
   text-transform: uppercase;
 }
-
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.content-user {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+.content-user:after {
+  content: "";
+  display: block;
+}
+.site-footer, .content-user:after {
+  height: 5px; 
+}
 
 </style>
 </head>
@@ -518,39 +544,57 @@ footer {
 </ul>
 
 	<form action="<c:url value="/usuarios/${usuario.login}"/>" method="POST">
-		<fieldset>
+		<div class="container">
+  		<form role="form">
 			<legend>Editar Usuário</legend>
 			
-			<label for="nome">Nome:</label>
-			<input id="nome" type="text" name="usuario.nome" value="${usuario.nome}" />*<br />
-			
-			<label for="sobrenome">Sobrenome:</label>
-			<input id="sobrenome" type="text" name="usuario.sobrenome" 
-			value="${usuario.sobrenome }" />*<br />
-			
-			<label for="password">Senha:</label>
-			<input id="password" class="required"
-				type="password" name="usuario.password" value=${usuario.password} />*<br />
-			
-			<label for="confirmacao">Confirme a senha:</label>
-			<input id="confirmacao" equalTo="#password" type="password" value=${usuario.password}/>*<br />
-			
-			<label for="cpfCnpj">CPF/CNPJ:</label>
-			<input id="cpfCnpj" type="text" name="usuario.cpfCnpj" value="${usuario.cpfCnpj }" />*<br />
-			
-			<label for="telefone">Telefone:</label>
-			<input id="telefone" type="text" name="usuario.telefone" value="${usuario.telefone }" />*<br />
-			
-			<label for="endereco">Endereço:</label>
-			<input id="endereco" type="text" name="usuario.endereco" value="${usuario.endereco }" />*<br />
-			* Campo obrigatório<br/>
+			<div class="form-group">
+		<label for="nome">Nome (*):</label>
+		<input id="nome" class="required" 
+			type="text" name="usuario.nome" value="${usuario.nome}" /><br />
+		</div>
+		
+		<div class="form-group">
+		<label for="sobrenome">Sobrenome (*):</label>
+		<input id="sobrenome" class="required" 
+			type="text" name="usuario.sobrenome" value="${usuario.sobrenome}" /><br />
+		</div>	
+		<div class="form-group">	
+		<label for="login">Login (*):</label>
+		<input id="login" class="required"
+			type="text" name="usuario.login" value="${usuario.login}" /><br />
+		</div>
+		<div class="form-group">	
+		<label for="password">Senha (*):</label>
+		<input id="password" class="required"
+			type="password" name="usuario.password"/><br />
+		</div>
+		<div class="form-group">	
+		<label for="confirmacao">Confirme a senha (*):</label>
+		<input id="confirmacao" equalTo="#password" type="password" /><br />
+		</div>
+		<div class="form-group">
+		<label for="cpfCnpj">CPF/CNPJ (*):</label>
+		<input id="cpfCnpj" class="required" 
+			type="text" name="usuario.cpfCnpj" value="${usuario.cpfCnpj}" /><br />
+		</div>
+		<div class="form-group">
+		<label for="telefone">Telefone (*):</label>
+		<input id="telefone" type="text" name="usuario.telefone" value="${usuario.telefone}" /><br />
+		</div>
+		<div class="form-group">
+		<label for="endereco">Endereço (*):</label>
+		<input id="endereco" type="text" name="usuario.endereco" value="${usuario.endereco}"/><br />
+		* Campo obrigatório<br/>
+		</div>
 			<button type="submit" name="_method" value="PUT">Enviar</button>
-		</fieldset>
+	  </form>
+  	</div>
 	</form>
 	
 	</div>
 	
-	<footer>
+    <footer class="site-footer">
     	<li>
     		<br />
     		<h6>		Todos os direitos reservados</h6>

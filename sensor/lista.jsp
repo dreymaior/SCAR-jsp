@@ -474,11 +474,13 @@ footer {
 .content-sensor a {
   color: #5a5a5a;
   text-transform: uppercase;
+  font-size: 100%;
 }
 
 .content-sensor .link {
 	color: #5a5a5a;
   	text-transform: uppercase;
+  	font-size: 100%;
 }
 
 table {
@@ -561,6 +563,12 @@ tr:nth-child(even){background-color: #f2f2f2}
     	</tbody>
     </table>
     </div>
-
+    
+    <footer>
+    	<li>
+    		<br />
+    		<h6>		Todos os direitos reservados</h6>
+    	</li>
+    </footer>
 </body>
 </html>

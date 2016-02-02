@@ -473,6 +473,21 @@ footer {
   color: #5a5a5a;
   text-transform: uppercase;
 }
+.content-user .link {
+	color: #5a5a5a;
+  	text-transform: uppercase;
+  	font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
 
 </style>
 <title>Listagem de Usuários</title>

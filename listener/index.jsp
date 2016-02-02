@@ -501,11 +501,11 @@ footer {
       <br/>
       <br/>
       <p>
-      	O projeto <strong>SCAR</strong> visa a automação de residências. A priori, o projeto surgiu para dar mais con-<br/>
-      	forto aos clientes, porém, com o desenvolvimento do mesmo, percebemos como pode auxiliar <br/>
-      	na seguranca da propriedade ou no auxílio à deficientes físicos. Automatizando portas, janelas,<br/>
-      	portões, alarmes, iluminação e entre outros, o usuário consegue manter a vigilancia de todo in-<br/>
-      	terior de sua residência e dos principais pontos de acesso.
+      	O projeto <strong>SCAR</strong> visa a automação de residências. A priori, o projeto surgiu
+      	 para dar mais conforto aos clientes, porém, com o desenvolvimento do mesmo, percebemos como pode
+      	 auxiliar na seguranca da propriedade ou no auxílio à deficientes físicos. Automatizando portas, 
+      	 janelas, portões, alarmes, iluminação e entre outros, o usuário consegue manter a vigilancia de
+      	 todo interior de sua residência e dos principais pontos de acesso.
       </p>
     </section>
     

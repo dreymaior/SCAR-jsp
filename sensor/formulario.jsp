@@ -533,6 +533,13 @@ footer {
 </form>
    
 </div>
+
+    <footer>
+    	<li>
+    		<br />
+    		<h6>		Todos os direitos reservados</h6>
+    	</li>
+    </footer>
     
 </body>
 </html>
