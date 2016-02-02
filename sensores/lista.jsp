@@ -467,6 +467,16 @@ footer {
 <title>Listagem de Sensores</title>
 </head>
 <body>
+<script language ="JavaScript">
+		function confirmar(){
+			if (confirm ("Excluir Sensor?")){
+				   return true;
+			}
+			else {
+				return false;
+			}
+		} 
+	</script>
 <header>
       <h1 class="float-l">
         <a href="/SCAR" title="Titulo do Site">SCAR</a>
@@ -526,7 +536,7 @@ footer {
     				<!-- <td><a href="remove?id=${sensor.id}">Remover</a></td>  -->
     				<td>
     					<form action="<c:url value="/admin/sensores/${sensores.modelo}"/>" method="POST">
-    						<button class="link" name="_method" value="DELETE">Remover</button>
+    						<button class="link" name="_method" value="DELETE" onclick="return confirmar()">Remover</button>
     					</form>
     				</td>
     			</tr>

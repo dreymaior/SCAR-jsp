@@ -497,6 +497,16 @@ tr:nth-child(even){background-color: #f2f2f2}
 <title>Listagem de Usuários</title>
 </head>
 <body>
+	<script language ="JavaScript">
+		function confirmar(){
+			if (confirm ("Excluir Usuário?")){
+				   return true;
+			}
+			else {
+				return false;
+			}
+			} 
+	</script>
 	<header>
       <h1 class="float-l">
         <a href="/SCAR" title="Titulo do Site">SCAR</a>
@@ -563,7 +573,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 					<td><a href="<c:url value="/usuarios/${usuario.login}"/>">Editar</a></td>
 					<td>
 						<form action="<c:url value="/usuarios/${usuario.login}"/>" method="POST">
-							<button class="link" name="_method" value="DELETE">Remover</button>
+							<button class="link" name="_method" value="DELETE" onclick="return confirmar()" >Remover</button>
 						</form>
 					</td>
 				</tr>
